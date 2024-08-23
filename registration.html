@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-image: url(./sunrise-deer-forest-lake-scenery-digital-art-hd-wallpaper-uhdpaper.com-221@1@n.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+            height: 700px;
+            width: 500px;
+            background-color: rgb(198, 155, 233,0.5);
+            border-radius: 50px;
+            text-align: center;
+        }
+        input{
+            height: 70px;
+            width: 97%;
+            margin-bottom: 10px;
+            border: 3px solid rgb(100, 0, 131);
+            border-radius: 20px;
+            opacity: .2;
+        }
+        #label{
+            font-size: 20px;
+        }
+        button{
+            height: 5%;
+            width: 230px;
+            border-radius: 20px;
+            color: blanchedalmond;
+            background-color: rgba(9, 0, 12, 0.2);
+        }button:hover{
+            color: aqua;
+            background-color: rgb(247, 138, 238);
+            box-shadow: 0px 0px 3px 3px rgb(218, 32, 255,0.2);
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="form" id="GTKING">
+                <h2 style="">SIGN IN</h2>
+                <br><br>
+                <form action="/submit_form" method="POST">
+                    <label id="label">Name</label>
+                    <input id="name" type="text">
+                    <br><br>
+                    <label id="label">Password</label>
+                    <input id="password" type="password" name="password" required>
+                    <br><br>
+                    <label id="label">Email</label>
+                    <input id="email" type="email">
+                    <br><br><br>
+                </form>
+
+                <button onclick="save()">Submit</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function save(){
+            let name = document.getElementById("name").value
+            let password = document.getElementById("password").value
+            let email = document.getElementById("email").value
+
+            if (name == ""){
+                alert("Please enter your name")
+            }else if(password == ""){
+                alert("Please enter your password")
+            }else if(email == ""){
+                alert("Please enter your email")
+            }else{
+                alert("Your account has been created")
+            }
+        }
+    </script>
+</html>
